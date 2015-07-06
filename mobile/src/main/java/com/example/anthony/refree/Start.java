@@ -17,6 +17,18 @@ public class Start extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        Button button = (Button)findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Start.this, TestActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new OnClickListener() {
 

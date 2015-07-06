@@ -78,6 +78,9 @@ public class OptionActivity extends ActionBarActivity {
                 textViewLocationItem.setTag(Integer.toString(id));
 
                 linearLayoutRecords.addView(textViewLocationItem);
+
+
+                textViewLocationItem.setOnLongClickListener(new OnLongClickListenerTeamRecord());
             }
 
         }
@@ -89,7 +92,10 @@ public class OptionActivity extends ActionBarActivity {
             locationItem.setText("Keine Eintraege bisher.");
 
             linearLayoutRecords.addView(locationItem);
+
+
         }
+
 
     }
 }

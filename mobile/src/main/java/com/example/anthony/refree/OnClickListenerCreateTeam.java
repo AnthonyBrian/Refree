@@ -34,10 +34,10 @@ public class OnClickListenerCreateTeam implements View.OnClickListener {
                             public void onClick(DialogInterface dialog, int id) {
 
                                 String TeamFirstname = editTeamName.getText().toString();
-                                ObjectTeam objectStudent = new ObjectTeam();
-                                objectStudent.teamname = TeamFirstname;
+                                ObjectTeam objectTeam = new ObjectTeam();
+                                objectTeam.teamname = TeamFirstname;
 
-                                boolean createSuccessful = new TableControllerTeam(context).create(objectStudent);
+                                boolean createSuccessful = new TableControllerTeam(context).create(objectTeam);
 
                                 if (createSuccessful) {
                                     Toast.makeText(context, "Mannschaftsname wurde gespeichert.", Toast.LENGTH_SHORT).show();
@@ -45,6 +45,7 @@ public class OnClickListenerCreateTeam implements View.OnClickListener {
                                     Toast.makeText(context, "Mannschaftsname konnte nicht gespeichert werden.", Toast.LENGTH_SHORT).show();
                                 }
 
+                                ((OptionActivity)context).countRecords();
                                 ((OptionActivity) context).readRecords();
 
                             }
