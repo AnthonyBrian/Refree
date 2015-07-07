@@ -48,6 +48,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.anthony.refree.Start" />
         </activity>
+        <activity
+            android:name=".SendActivity"
+            android:label="@string/title_activity_send"
+            android:parentActivityName=".Start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.anthony.refree.Start" />
+        </activity>
     </application>
 
 </manifest>

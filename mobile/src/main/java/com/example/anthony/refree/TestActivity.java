@@ -155,7 +155,7 @@ public class TestActivity extends ActionBarActivity implements View.OnClickListe
                 Notification notification = new NotificationCompat.Builder(getApplication())
                         .setSmallIcon(R.drawable.androidsoccer)
                         .setContentTitle("Referee App")
-                        .setContentText("My first Android Wear notification")
+                        .setContentText("Referee App starten?")
                         .extend(
                                 new NotificationCompat.WearableExtender().setHintShowBackgroundOnly(true))
                         .build();
@@ -233,7 +233,7 @@ public class TestActivity extends ActionBarActivity implements View.OnClickListe
         String label = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Mannschaft ausgewaehlt: " + label,
+        Toast.makeText(parent.getContext(), "Mannschaft: " + label,
                 Toast.LENGTH_LONG).show();
 
     }

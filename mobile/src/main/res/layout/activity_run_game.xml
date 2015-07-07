@@ -4,6 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bgall"
     tools:context="com.example.anthony.refree.RunGame">
 
     <TextView android:text="Spiel beginnt" android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         android:text="New Text"
         android:id="@+id/Spielbeginn"
         android:layout_alignTop="@+id/Datum"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignEnd="@android:id/list"
+        android:layout_marginEnd="54dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,19 +39,80 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="30dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTimer"
+        android:textSize="25dp"
+        android:text="00:00:00"
+        android:layout_alignTop="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_alignTop="@+id/btnadd"
+        android:layout_toEndOf="@+id/btnadd" />
+
+    <Button
+        android:id="@+id/btnpause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:layout_alignTop="@+id/btnstart"
+        android:layout_toEndOf="@+id/btnstart" />
+
    <Button
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:id="@+id/btnadd"
        android:text="Event"
-       android:layout_below="@id/mannschaft1"
+       android:layout_below="@id/textTimer"
        />
 
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@android:id/list"
-        android:layout_below="@id/btnadd">
+        android:layout_below="@+id/btnadd">
     </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senden"
+        android:id="@+id/btnsend"
+        android:layout_alignStart="@+id/Spielbeginn"
+        android:layout_above="@+id/Spielbeginn" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
+        android:inputType="number"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/mannschaft1"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textTimer"
+        android:layout_alignEnd="@+id/mannschaft1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
+        android:inputType="number"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignTop="@+id/textTimer"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/btnpause" />
+
+
+
 
 </RelativeLayout>
