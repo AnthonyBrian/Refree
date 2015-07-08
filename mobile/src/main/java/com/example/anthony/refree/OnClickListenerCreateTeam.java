@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-/**
- * Created by Anthony on 16.06.2015.
- */
+
 public class OnClickListenerCreateTeam implements View.OnClickListener {
 
     @Override

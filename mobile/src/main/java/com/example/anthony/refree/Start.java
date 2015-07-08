@@ -9,6 +9,9 @@ import android.view.View.OnClickListener;
 import android.view.View;
 import android.content.Intent;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 public class Start extends ActionBarActivity {
 
@@ -51,6 +54,10 @@ public class Start extends ActionBarActivity {
             }
 
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
 
@@ -59,6 +66,7 @@ public class Start extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_start, menu);
         return true;
+
     }
 
     @Override

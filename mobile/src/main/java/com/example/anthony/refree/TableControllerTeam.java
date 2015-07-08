@@ -14,9 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Anthony on 16.06.2015.
- */
+
 public class TableControllerTeam extends DatabaseHandler {
 
 
