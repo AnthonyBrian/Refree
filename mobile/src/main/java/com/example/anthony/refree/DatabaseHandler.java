@@ -39,10 +39,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    /**
-     * Getting all labels
-     * returns list of labels
-     * */
+
+
     public List<String> getAllLabels(){
         List<String> list = new ArrayList<String>();
 
